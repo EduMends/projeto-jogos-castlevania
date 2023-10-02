@@ -34,36 +34,5 @@ function desselecionarBotao() {
 	const botaoSelecionado = document.querySelector(".botao.selecionado");
 	botaoSelecionado.classList.remove("selecionado");
 }
-const carousel = document.getElementById(".personagens");
-const items = document.querySelectorAll(".personagem");
-let currentItem = 0;
-let touchStartX = 0;
 
-carousel.addEventListener("touchstart", (e) => {
-    touchStartX = e.touches[0].clientX;
-});
-
-carousel.addEventListener("touchmove", (e) => {
-    const touchEndX = e.touches[0].clientX;
-    const deltaX = touchEndX - touchStartX;
-
-    if (deltaX > 50) {
-        // Deslizar para a direita (próximo item)
-        if (currentItem > 0) {
-            currentItem--;
-            updateCarousel();
-        }
-    } else if (deltaX < -50) {
-        // Deslizar para a esquerda (item anterior)
-        if (currentItem < items.length - 1) {
-            currentItem++;
-            updateCarousel();
-        }
-    }
-});
-
-function updateCarousel() {
-    const translateX = -currentItem * 100; // Assumindo que cada item tem largura de 100% do contêiner
-    carousel.style.transform = `translateX(${translateX}%)`;
-}
 
