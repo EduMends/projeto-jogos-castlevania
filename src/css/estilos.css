@@ -38,6 +38,7 @@ main .personagem .imagem {
     justify-content: center;
     min-height: 100vh;
     max-width: 380px;
+    text-indent: 5px;
     z-index: 1;
 }
 
