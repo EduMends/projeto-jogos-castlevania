@@ -46,14 +46,15 @@
         height: 85%;
     }
     .conteudo {
-        top: -20%;
+        top: -22%;
+        padding: 20px;
     }
     .conteudo .nome-personagem {
         font-size: 24px;
     }
     .botoes {
         padding: 20px;
-        top: -8%;
+        top: -10%;
     }
     .botoes .botao img {
         
